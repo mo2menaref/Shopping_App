@@ -13,14 +13,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
-
-
   @override
   void initState() {
     super.initState();
     pageViewController = PageController();
     tabController = TabController(length: 3, vsync: this);
   }
+
   void _updateCurrentPageIndex(int index) {
     setState(() {
       currentPageIndex = index;
@@ -32,6 +31,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       curve: Curves.easeInOut,
     );
   }
+
   @override
   void dispose() {
     super.dispose();
@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           SizedBox(height: 20),
           SizedBox(
             height: 200,
-            child:  Stack(
+            child: Stack(
               children: [
                 PageView(
                   controller: pageViewController,
@@ -88,7 +88,16 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               ],
             ),
           ),
-
+          SizedBox(height: 20),
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: GridView.count(
+              crossAxisCount: 2,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              children: [],
+            ),
+          ),
         ],
       ),
     );
