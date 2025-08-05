@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping/widgets/dotsindicator.dart';
 import 'package:shopping/utils/constants.dart';
+import 'package:shopping/widgets/product_card.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -17,7 +18,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     pageViewController = PageController();
-    tabController = TabController(length: 3, vsync: this);
+    tabController = TabController(length: 5, vsync: this);
   }
 
   void _updateCurrentPageIndex(int index) {
@@ -70,9 +71,11 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     _updateCurrentPageIndex(index);
                   },
                   children: [
-                    Card(child: Center(child: Text('Page '))),
-                    Card(child: Center(child: Text('Page '))),
-                    Card(child: Center(child: Text('Page '))),
+                    Card(child: Center(child: Image.asset('assets/images/watch1.jpg')),color: Colors.white,),
+                    Card(child: Center(child: Image.asset('assets/images/backbag1.jpg')),color: Colors.white,),
+                    Card(child: Center(child: Image.asset('assets/images/shirt2.jpg')),color: Colors.white,),
+                    Card(child: Center(child: Image.asset('assets/images/shirt3.jpg')),color: Colors.white,),
+                    Card(child: Center(child: Image.asset('assets/images/backbag3.jpg')),color: Colors.white,),
                   ],
                 ),
                 Positioned(
@@ -89,15 +92,91 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             ),
           ),
           SizedBox(height: 20),
+          GridView.count(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            crossAxisCount: 2,
+            childAspectRatio: 0.9,
+            children: [
+              ProductCard(
+                title: "Modern Black Watch",
+                content: 'A Modern Black Watch for Adults',
+                imagePath: 'assets/images/watch3.jpg',
+              ),
+              ProductCard(
+                title: "Black Bag",
+                content: 'A back bag for Students and Programmers',
+                imagePath: 'assets/images/backbag2.jpg',
+              ),
+              ProductCard(
+                title: "T-shirt Wide",
+                content: 'T-shirt Wide for Teenagers with all sizes',
+                imagePath: 'assets/images/shirt1.jpg',
+              ),
+              ProductCard(
+                title: "Sneaker Shoes",
+                content: 'off-white Sneaker Shoes for Teenagers with all sizes',
+                imagePath: 'assets/images/shoes1.jpg',
+              ),
+              ProductCard(
+                title: "Sneaker Shoes",
+                content: 'off-white Sneaker Shoes for Teenagers with all sizes',
+                imagePath: 'assets/images/shoes2.jpg',
+              ),
+              ProductCard(
+                title: "Black Bag",
+                content: 'A back bag for Students and Programmers',
+                imagePath: 'assets/images/shirt2.jpg',
+              ),
+              ProductCard(
+                title: "Sneaker Shoes",
+                content: 'Green Sneaker Shoes for Teenagers with all sizes',
+                imagePath: 'assets/images/shoes3.jpg',
+              ),
+              ProductCard(
+                title: "Sneaker Shoes",
+                content: 'Black Sneaker Shoes for Teenagers with all sizes',
+                imagePath: 'assets/images/shoes4.jpg',
+              ),
+              ProductCard(
+                title: "T-shirt Wide",
+                content: 'T-shirt Wide for Teenagers with all sizes',
+                imagePath: 'assets/images/shirt3.jpg',
+              ),
+              ProductCard(
+                title: "Sneaker Shoes",
+                content: 'off-white Sneaker Shoes for Teenagers with all sizes',
+                imagePath: 'assets/images/shoes5.jpg',
+              ),
+              ProductCard(
+                title: "Black Bag",
+                content: 'A back bag for Students and Programmers',
+                imagePath: 'assets/images/backbag3.jpg',
+              ),
+              ProductCard(
+                title: "Classic Watch",
+                content: 'A back bag for Students and Programmers',
+                imagePath: 'assets/images/watch2.jpg',
+              ),
+            ],
+          ),
           Padding(
             padding: EdgeInsets.all(20),
-            child: GridView.count(
-              crossAxisCount: 2,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
-              children: [],
+            child: Text(
+              "Hot Offers",
+                  style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Suwannaphum',
+                ),
+                textAlign: TextAlign.center,
             ),
           ),
+          ListView.builder(itemBuilder: (BuildContext context, int index) { 
+
+          },
+
+          )
         ],
       ),
     );
