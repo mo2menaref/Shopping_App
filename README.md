@@ -1,18 +1,18 @@
-🛒 #Flutter Shopping App
+# 🛒Flutter Shopping App
 A Simple Flutter shopping application demonstrating modern mobile app development principles, from basic Dart programming to advanced Flutter UI implementation with smooth animations and internationalization support.
-📱 Project Overview
+## 📱 Project Overview
 This Flutter project showcases a complete shopping app development lifecycle, featuring user authentication, product displays, interactive UI components, and Arabic localization. The app provides a real-world shopping interface with seamless transitions and responsive design.
-✨ ##Features
-🎨 ##Aesthetic Welcome Experience
+✨  Features
+🎨  Aesthetic Welcome Experience
 
 Three-page Introduction: Interactive PageView with smooth page transitions
 Custom Typography: Suwannaphum-Regular font with shadow effects
 Mixed Media Display: Local and online images in responsive layouts
 Navigation Controls: Page indicators with smooth animations
 
-🔐 User Authentication
+## 🔐 User Authentication
 
-Sign-Up Form with comprehensive validation:
+## Sign-Up Form with comprehensive validation:
 
 Full Name (automatic capitalization)
 Email validation (@ symbol, .com are required)
@@ -23,26 +23,26 @@ Password confirmation matching
 Sign-In Form with streamlined validation
 Success Dialogs with custom styling and smooth transitions
 
-🏠 Shopping Home Screen
+## 🏠 Shopping Home Screen
 
 Featured Products: Horizontal PageView showcasing product highlights
 Product Grid: Responsive 2-column GridView with product cards
 Interactive Elements: Add-to-cart functionality with SnackBar feedback
 Hot Offers Section: Vertical ListView with image and description layouts using Expanded widgets
 
-🎭 Smooth Animations
+## 🎭 Smooth Animations
 
 Fade Transitions: Seamless fade-out from auth screens to home screen
 Page Transitions: Custom PageRouteBuilder with FadeTransition effects
 Interactive Feedback: Smooth animations for user interactions
 
-🌍 Internationalization
+## 🌍 Internationalization
 
 Arabic Language Support: Complete app localization
 Dynamic Text: All UI text sourced from .arb files
 RTL Support: Proper right-to-left layout support
 
-🏗️ Project Structure
+## 🏗️ Project Structure
 lib/
 ├── main.dart                        # App entry point
 ├── screens/
@@ -67,7 +67,7 @@ lib/
     │   └── Suwannaphum-Regular.ttf  # Custom font
     └── images/       # App images
     └── translation/  # For localization (json files)  
-🚀 Getting Started
+## 🚀 Getting Started
 Prerequisites
 
 Flutter SDK (3.0 or higher)
@@ -84,7 +84,7 @@ bashflutter gen-l10n
 Run the app
 bashflutter run
 
-📋 Technical Implementation
+## 📋 Technical Implementation
 Core Technologies
 
 Flutter SDK: UI framework and app structure
@@ -92,7 +92,7 @@ Dart: Application logic and OOP implementation
 Flutter Intl: Internationalization and localization
 Custom Animations: AnimationController and Tween animations
 
-Key Features Implementation
+## Key Features Implementation
 
 Form Validation: Custom validators for email, password, and name fields
 State Management: StatefulWidget with proper lifecycle management
@@ -100,14 +100,14 @@ Navigation: Named routes with custom page transitions
 Responsive Design: GridView and ListView with proper aspect ratios
 Animation Controllers: Fade transitions with TickerProviderStateMixin
 
-Validation Rules
+## Validation Rules
 
-Email: Must contain @ symbol
+Email: Must contain @ symbol, .com
 Password: Minimum 6 characters
 Name: First letter automatically capitalized
 Password Confirmation: Must match original password
 
-🎯 Learning Outcomes
+## 🎯 Learning Outcomes
 This project demonstrates mastery of:
 
 Dart Programming: Variables, functions, OOP concepts, control flow
@@ -118,15 +118,14 @@ Navigation: Route management, page transitions
 Internationalization: Multi-language support, cultural adaptation
 Code Organization: Modular architecture, clean code practices
 
-📸 Screenshots
-Add your app screenshots here showing:
+ ## 📸 Screenshots
 
 Welcome/Intro screens
 Sign-up form
 Sign-in form
 Home screen with products
 Hot offers section
-Arabic version (if implemented)
+Arabic version
 
 🤝 Contributing
 
@@ -137,12 +136,11 @@ Push to the branch (git push origin feature/AmazingFeature)
 Open a Pull Request
 
 📄 License
-This project is open source and available under the MIT License.
+This project is open source
 👨‍💻 Developer
-[Your Name]
+Mo'men Mohamed Aref
 
-GitHub: @your-username
-LinkedIn: Your LinkedIn Profile
-
+GitHub: mo2menaref
+LinkedIn: https://www.linkedin.com/in/mo-men-aref-ab39ab1a3/
 
 Built with ❤️ using Flutter & Dart
