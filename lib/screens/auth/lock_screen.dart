@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping/widgets/custom_button.dart';
 
@@ -28,7 +29,7 @@ class _LockScreenState extends State<LockScreen> {
                 onPressed: () {
                   Navigator.pushNamed(context, 'login');
                 },
-                child: Text("Log in"),
+                child: Text(tr('login')),
               ),
             ),
             SizedBox(height: 10),
@@ -39,7 +40,7 @@ class _LockScreenState extends State<LockScreen> {
                 onPressed: () {
                   Navigator.pushNamed(context, 'signup');
                 },
-                child: Text("Sign up"),
+                child: Text(tr('signup')),
               ),
             ),
           ],

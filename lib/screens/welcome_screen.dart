@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping/widgets/custom_button.dart';
 import 'package:shopping/widgets/dotsindicator.dart';
@@ -79,8 +80,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
                       ],
                     ),
                     SizedBox(height: 30),
-                    Text(
-                      "Welcome !!",
+                    Text('welcome',
                       style: TextStyle(
                         fontFamily: 'Suwannaphum',
                         color: Colors.black,
@@ -93,7 +93,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
                           ),
                         ],
                       ),
-                    ),
+                    ).tr(),
                   ],
                 ),
               ),
@@ -109,7 +109,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
                     ),
                     SizedBox(height: 30),
                     Text(
-                      "Are You Ready For Shopping !!",
+                      tr('ready'),
                       style: TextStyle(
                         fontFamily: 'Suwannaphum',
                         color: Colors.black,
@@ -137,7 +137,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
                       onPressed: () {
                         Navigator.pushNamed(context, 'lock');
                       },
-                      child: Text("Let's Start"),
+                      child: Text(tr('lets')),
                     ),
                   ],
                 ),

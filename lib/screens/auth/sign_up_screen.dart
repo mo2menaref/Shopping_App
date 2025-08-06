@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping/widgets/custom_button.dart';
 import 'package:shopping/widgets/custom_text_field.dart';
@@ -65,7 +66,7 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
               child: TextFormField(
                 controller: nameController,
                 validator: Validators.validateName,
-                decoration: Lockstyle.copyWith(hintText: 'Full Name'),
+                decoration: Lockstyle.copyWith(hintText: tr('name')),
               ),
             ),
             SizedBox(height: 10),
@@ -75,7 +76,7 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
               child: TextFormField(
                 controller: emailController,
                 validator: Validators.validateEmail ,
-                decoration: Lockstyle.copyWith(hintText: 'Email'),
+                decoration: Lockstyle.copyWith(hintText: tr('email')),
               ),
             ),
             SizedBox(height: 10),
@@ -86,7 +87,7 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
                 controller: passwordController,
                 validator: Validators.validatePassword ,
                 obscureText: true,
-                decoration: Lockstyle.copyWith(hintText: 'Password'),
+                decoration: Lockstyle.copyWith(hintText: tr('password')),
               ),
             ),
             SizedBox(height: 10),
@@ -97,7 +98,7 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
                 controller: confirmPasswordController,
                 validator: Validators.validatePassword ,
                 obscureText: true,
-                decoration: Lockstyle.copyWith(hintText: 'Confirm Password'),
+                decoration: Lockstyle.copyWith(hintText: tr('confirm_pass')),
               ),
             ),
             SizedBox(height: 20),
@@ -112,7 +113,7 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
                       builder: (BuildContext context) {
                         return SimpleDialog(
                           title: Text(
-                            "Account Created successfully",
+                            tr('signup_message'),
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -136,7 +137,7 @@ class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMix
                     );
                   }
                 },
-                child: Text("Sign up"),
+                child: Text(tr('signup')),
               ),
             ),
           ],

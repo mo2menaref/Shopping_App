@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping/widgets/dotsindicator.dart';
@@ -90,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Colors.white,
-        title: Text("Our Products"),
+        title: Text(tr('home_name')),
       ),
       body: AnimatedBuilder(
         animation: _fadeAnimation,
@@ -101,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               children: [
                 SizedBox(height: 20),
                 Text(
-                  "Featured Products",
+                  tr('products'),
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -242,7 +243,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 Padding(
                   padding: EdgeInsets.all(20),
                   child: Text(
-                    "Hot Offers",
+                    tr('hot_offers'),
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,

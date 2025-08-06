@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping/widgets/hot_offer_item.dart';
 
@@ -75,7 +76,7 @@ class ProductCard extends StatelessWidget {
                     child: IconButton(
                       onPressed: () {
                         final snackBar = SnackBar(
-                          content: const Text('Item added to the cart'),
+                          content: Text(tr('add_cart')),
                           duration: Duration(seconds: 3),
                           action: SnackBarAction(
                             label: 'Ok',

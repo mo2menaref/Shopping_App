@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping/screens/home_screen.dart';
 import 'package:shopping/widgets/custom_button.dart';
@@ -60,7 +61,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                     child: TextFormField(
                       controller: emailController,
                       validator: Validators.validateEmail,
-                      decoration: Lockstyle.copyWith(hintText: 'Email'),
+                      decoration: Lockstyle.copyWith(hintText: tr('email')),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -70,7 +71,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                       controller: passwordController,
                       validator: Validators.validatePassword,
                       obscureText: true,
-                      decoration: Lockstyle.copyWith(hintText: 'Password'),
+                      decoration: Lockstyle.copyWith(hintText: tr('password')),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -84,8 +85,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                             context: context,
                             builder: (BuildContext context) {
                               return SimpleDialog(
-                                title: Text(
-                                  "Account Login successfully",
+                                title: Text(tr('login_message'),
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
@@ -141,7 +141,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                           });
                         }
                       },
-                      child: Text("Log in"),
+                      child: Text(tr('login')),
                     ),
                   ),
                 ],

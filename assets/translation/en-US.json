@@ -1,0 +1,17 @@
+{
+  "welcome": "Welcome !!",
+  "ready": "Are You Ready For Shopping !!",
+  "lets": "Let's Start",
+  "login": "Log in",
+  "signup": "Sign up",
+  "email": "E-mail",
+  "name": "Name",
+  "password": "Password",
+  "confirm_pass": "Confirm-Password",
+  "signup_message": "Account Created successfully",
+  "login_message": "Account Logged in successfully",
+  "home_name": "Our Products",
+  "products": "Featured Products",
+  "hot_offers": "Hot Offers",
+  "add_cart": "Item added to the cart"
+}
