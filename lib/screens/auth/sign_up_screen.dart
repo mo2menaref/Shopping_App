@@ -12,7 +12,37 @@ class SignUpScreen extends StatefulWidget {
   State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+
+
+class _SignUpScreenState extends State<SignUpScreen> with TickerProviderStateMixin {
+
+  late AnimationController _fadeController;
+  late Animation<double> _fadeAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Initialize fade animation controller
+    _fadeController = AnimationController(
+      duration: const Duration(seconds: 1),
+      vsync: this,
+    );
+
+    _fadeAnimation = Tween<double>(
+      begin: 1.0,
+      end: 0.0,
+    ).animate(CurvedAnimation(
+      parent: _fadeController,
+      curve: Curves.easeInOut,
+    ));
+  }
+
+  @override
+  void dispose() {
+    _fadeController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
 
@@ -82,7 +112,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       builder: (BuildContext context) {
                         return SimpleDialog(
                           title: Text(
-                            "Account Login successfully",
+                            "Account Created successfully",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,

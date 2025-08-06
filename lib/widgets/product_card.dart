@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping/widgets/hot_offer_item.dart';
 
 class ProductCard extends StatelessWidget {
   final String title;
@@ -95,4 +96,9 @@ class ProductCard extends StatelessWidget {
       ),
     );
   }
+}
+
+class HotOfferData extends HotOfferItem{
+
+  const HotOfferData({super.key, required super.desc, required super.imagePath});
 }
